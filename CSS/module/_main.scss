@@ -1,0 +1,51 @@
+// ----カルーセル---- ※将来的にカルーセルにする
+.slide--wrap {
+  width: 90%;
+  margin: 20px auto 100px auto;
+
+  .slide__image {
+    display: block;
+    width: 100%;
+  }
+}
+
+// ----煮焚きのこだわりセクション----
+.commitment{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+  h1{
+    text-shadow: 1px 1px 2px gray;
+  }
+}
+
+.commitment--wrap {
+  display: flex;
+  justify-content:space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.left--wrap{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-right: 5%;
+}
+
+.right--wrap{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 150px;
+}
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+

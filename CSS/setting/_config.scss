@@ -1,0 +1,11 @@
+@mixin base-font {
+      font-family: "Sawarabi Mincho", serif;
+      font-weight: 400;
+      font-style: normal;
+}
+
+// サイト全体の設定
+body {
+      @include base-font();
+      margin: 0;
+    }
