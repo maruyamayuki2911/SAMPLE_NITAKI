@@ -141,7 +141,7 @@ img {
   margin: 30px auto 30px auto;
 }
 
-.title {
+.menu-title {
   margin-bottom: 30px;
 }
 
@@ -195,7 +195,6 @@ img {
 
 .menu-side {
   margin: 0 auto 30px auto;
-  height: 500px;
 }
 .menu-side h2 {
   width: 90%;
@@ -212,13 +211,66 @@ img {
   display: flex;
 }
 
-dl {
+.dl-menu {
   display: flex;
   justify-content: space-between;
   width: 80%;
   border-bottom: 1px solid #c2c2c2;
 }
-dl span {
+.dl-menu span {
   font-size: 1.2rem;
   font-weight: bold;
+}
+
+.shop {
+  width: 90%;
+  margin: 30px auto 30px auto;
+}
+
+.shop-title {
+  margin: 30px auto;
+}
+.shop-title .shop-title--ja {
+  text-align: center;
+}
+.shop-title .shop-title--en {
+  text-align: center;
+}
+
+.shop-info {
+  width: 100%;
+}
+.shop-info dl {
+  display: flex;
+  width: 800px;
+  margin-inline: auto;
+  border-bottom: 1px solid #c2c2c2;
+}
+.shop-info dl dt {
+  width: 170px;
+}
+
+.map {
+  width: 90%;
+  margin-inline: auto;
+}
+
+.map-title--wrap {
+  width: 100%;
+}
+.map-title--wrap h1 {
+  text-align: center;
+}
+.map-title--wrap p {
+  text-align: center;
+}
+
+.map-area {
+  width: 100%;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  margin-inline: auto;
 }

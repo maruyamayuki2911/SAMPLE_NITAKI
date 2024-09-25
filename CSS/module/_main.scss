@@ -78,7 +78,7 @@ img {
   margin: 30px auto 30px auto;
 }
 
-.title {
+.menu-title {
   margin-bottom: 30px;
 }
 
@@ -141,16 +141,17 @@ img {
 
 
 // サイドメニュー
-.menu-side{
+.menu-side {
   margin: 0 auto 30px auto;
-  height: 500px;
-  
-  h2{
+  // height: 500px;
+
+  h2 {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
   }
-  div{
+
+  div {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -159,18 +160,84 @@ img {
 
 // リスト
 
-.menu-side--wrap{
-  display:flex;
+.menu-side--wrap {
+  display: flex;
 }
 
-dl{
+.dl-menu {
   display: flex;
   justify-content: space-between;
   width: 80%;
   border-bottom: 1px solid #c2c2c2;
 
-  span{
+  span {
     font-size: 1.2rem;
     font-weight: bold;
   }
+}
+
+// ----店舗情報セクション----
+
+//セクション
+.shop {
+  width: 90%;
+  margin: 30px auto 30px auto;
+}
+
+// タイトル
+.shop-title {
+  margin: 30px auto;
+
+  .shop-title--ja {
+    text-align: center;
+  }
+
+  .shop-title--en {
+    text-align: center;
+  }
+}
+
+
+//店舗情報
+.shop-info {
+  width: 100%;
+
+  dl {
+    display: flex;
+    width: 800px;
+    margin-inline: auto;
+    border-bottom: 1px solid #c2c2c2;
+
+    dt {
+      width: 170px;
+    }
+  }
+}
+
+// ----店舗情報セクション----
+.map{
+  width: 90%;
+  margin-inline:auto;
+}
+
+.map-title--wrap{
+  width: 100%;
+
+  h1{
+    text-align: center;
+  }
+
+  p{
+    text-align: center;
+  }
+}
+
+.map-area{
+  width: 100%;
+}
+
+iframe{
+  display: block;
+  width: 100%;
+  margin-inline: auto;
 }
