@@ -4,7 +4,7 @@ body {
   font-weight: 400;
   font-style: normal;
   margin: 0 auto 0 auto;
-  max-width: 1424px;
+  max-width: 1700px;
   background-color: #ffffff;
 }
 
@@ -16,15 +16,22 @@ p {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  margin-inline: auto;
+  background-color: #EEEEEE;
 }
 
 .header__logo {
-  width: 10%;
-  margin: 0;
+  width: 15%;
+  margin: 0 0 0 20px;
+  object-fit: cover;
 }
 
 .header--wrap {
@@ -32,9 +39,8 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
+  height: 100%;
+  margin-inline: auto;
 }
 
 .nav--pc {
@@ -52,15 +58,29 @@ header {
   text-align: center;
 }
 .nav--pc li a {
+  position: relative;
   font-size: 20px;
   font-weight: bold;
 }
 .nav--pc li a:link {
   color: #222222;
-  text-decoration: none;
 }
 .nav--pc li a:visited {
   color: #222222;
+}
+.nav--pc li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #222222;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transition: transform, 0.2s ease-in-out;
+}
+.nav--pc li a:hover::after {
+  transform: scaleX(1);
 }
 .nav--pc li span {
   display: block;
@@ -69,8 +89,8 @@ header {
 }
 
 .slide--wrap {
-  width: 90%;
-  margin: 20px auto 100px auto;
+  width: 100%;
+  margin: 0 auto 100px auto;
 }
 .slide--wrap .slide__image {
   display: block;
@@ -265,12 +285,59 @@ img {
   text-align: center;
 }
 
-.map-area {
-  width: 100%;
-}
-
 iframe {
   display: block;
   width: 100%;
+  margin: 30px auto 30px auto;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 150px;
   margin-inline: auto;
+  background-color: rgb(22, 11, 11);
+}
+
+.copyright {
+  font-size: 1rem;
+  color: white;
+}
+
+.logo__area {
+  display: flex;
+}
+.logo__area .logo-x {
+  padding: 10px;
+  width: 30px;
+}
+.logo__area .logo-instagram {
+  padding: 10px;
+  width: 30px;
+}
+
+.btn-top {
+  font-size: 1rem;
+  position: relative;
+  color: white;
+}
+
+.btn-top::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: white;
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: transform, 0.2s ease-in-out;
+}
+
+.btn-top:hover::after {
+  transform: scaleX(1);
 }

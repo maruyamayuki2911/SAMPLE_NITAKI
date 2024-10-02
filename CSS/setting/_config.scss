@@ -9,7 +9,7 @@
 body {
   @include base-font();
   margin: 0 auto 0 auto;
-  max-width: 1424px;
+  max-width: 1700px;
   background-color: #ffffff;
 }
 
@@ -28,4 +28,8 @@ h1 {
 
 p {
   margin: 0;
+}
+
+a{
+  text-decoration: none;
 }

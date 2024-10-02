@@ -2,8 +2,8 @@
 
 // ----カルーセル---- ※将来的にカルーセルにする
 .slide--wrap {
-  width: 90%;
-  margin: 20px auto 100px auto;
+  width: 100%;
+  margin: 0 auto 100px auto;
 
   .slide__image {
     display: block;
@@ -232,12 +232,9 @@ img {
   }
 }
 
-.map-area{
-  width: 100%;
-}
 
 iframe{
   display: block;
   width: 100%;
-  margin-inline: auto;
+  margin: 30px auto 30px auto;
 }
