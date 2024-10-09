@@ -57,12 +57,24 @@
   margin-right: 5%;
 }
 
+.left__content{
+  padding: 2%;
+  margin-bottom: 5%;
+  background-color: rgba(238,238,238,0.5);
+}
+
 // 右側のこだわり
 .right--wrap {
   display: flex;
   flex-direction: column;
   width: 50%;
   margin-top: 150px;
+}
+
+.right__content{
+  padding: 2%;
+  margin-bottom: 5%;
+  background-color: rgba(238,238,238,0.5);
 }
 
 img {
