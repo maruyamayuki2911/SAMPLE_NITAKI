@@ -21,6 +21,7 @@ a {
 }
 
 header {
+  z-index: 100;
   position: sticky;
   top: 0;
   width: 100%;
@@ -179,50 +180,53 @@ img {
 
 .menu1 {
   display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   margin-bottom: 100px;
 }
 .menu1 img {
-  width: 30%;
+  object-fit: cover;
+  width: 50%;
   margin: 0;
 }
 
 .menu1__info {
-  background-color: #fffff9;
-  margin-left: 100px;
+  width: 700px;
+  height: max-content;
+  padding: 10px;
+  margin: auto;
+  background-color: #f2f2df;
+  box-shadow: 10px 10px #EEEEEE;
 }
 .menu1__info div {
   width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 .menu2 {
   display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-around;
   width: 90%;
-  margin-bottom: 100px;
+  margin: 0 auto 100px auto;
+}
+.menu2 .menu2__info {
+  width: 700px;
+  height: max-content;
+  padding: 10px;
+  margin: auto;
+  background-color: #f2f2df;
+  box-shadow: 10px 10px #EEEEEE;
+}
+.menu2 .menu2__info div {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .menu2 img {
-  width: 30%;
-}
-
-.menu2__info {
-  background-color: #fffff9;
-  margin-right: 100px;
-}
-.menu2__info div {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.menu3__info {
-  background-color: #fffff9;
-  margin-left: 100px;
-}
-.menu3__info div {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 45%;
+  margin: 0;
+  object-fit: cover;
 }
 
 .menu-side {
@@ -230,8 +234,8 @@ img {
 }
 .menu-side h2 {
   width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
+  text-align: center;
 }
 .menu-side div {
   width: 90%;
@@ -241,6 +245,16 @@ img {
 
 .menu-side--wrap {
   display: flex;
+  justify-content: center;
+}
+.menu-side--wrap .rise {
+  width: 500px;
+  margin: 0;
+  padding-left: 70px;
+}
+.menu-side--wrap .topping {
+  width: 500px;
+  margin: 0;
 }
 
 .dl-menu {

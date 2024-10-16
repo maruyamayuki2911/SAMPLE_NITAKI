@@ -94,60 +94,61 @@ img {
   margin-bottom: 30px;
 }
 
-// 煮干しラーメン
+// 煮干しラーメン、煮干しラーメン 炭
 .menu1 {
   display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   margin-bottom: 100px;
 
   img {
-    width: 30%;
+    object-fit: cover;
+    width: 50%;
     margin: 0;
   }
 }
 
 .menu1__info {
-  background-color: #fffff9;
-  margin-left: 100px;
-
+  width: 700px;
+  height: max-content;
+  padding: 10px;
+  margin: auto ;
+  background-color: #f2f2df;
+  box-shadow: 10px 10px #EEEEEE;
+  
   div {
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin:auto;
   }
 }
 
 // 濃厚煮干しラーメン
 .menu2 {
   display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-around;
   width: 90%;
-  margin-bottom: 100px;
+  margin: 0 auto 100px auto;
+
+  .menu2__info {
+    width: 700px;
+    height: max-content;
+    padding: 10px;
+    margin: auto;
+    background-color: #f2f2df;
+    box-shadow: 10px 10px #EEEEEE;
+  
+    div {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 
   img {
-    width: 30%;
-  }
-}
-
-.menu2__info {
-  background-color: #fffff9;
-  margin-right: 100px;
-
-  div {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-
-// 煮干しラーメン 炭
-.menu3__info {
-  background-color: #fffff9;
-  margin-left: 100px;
-
-  div {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 45%;
+    margin: 0;
+    object-fit: cover;
   }
 }
 
@@ -159,8 +160,8 @@ img {
 
   h2 {
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
+    text-align: center;
   }
 
   div {
@@ -174,6 +175,19 @@ img {
 
 .menu-side--wrap {
   display: flex;
+  justify-content: center;
+  
+
+  .rise {
+    width: 500px;
+    margin: 0;
+    padding-left: 70px;
+  }
+
+  .topping {
+    width: 500px;
+    margin: 0;
+  }
 }
 
 .dl-menu {

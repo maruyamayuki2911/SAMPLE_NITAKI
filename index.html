@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SAMPLE_NITAKI</title>
   <link rel="stylesheet" href="./CSS/style.css">
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 </head>
 
 <body>
@@ -25,7 +30,15 @@
   <main>
     <section id="slide">
       <div class="slide--wrap">
-        <img src="./image/煮干しラーメン.jpg" alt="煮干しラーメンの画像" class="slide__image">
+        <div>
+          <img src="./image/煮干しラーメン.jpg" alt="煮干しラーメンの画像" class="slide__image">
+        </div>
+        <div>
+          <img src="./image/寸胴でラーメンを茹でる画像.jpg" alt="寸胴でラーメンを茹でる画像" class="slide__image">
+        </div>
+        <div>
+          <img src="./image/麺を持ち上げる様子.jpg" alt="麺を持ち上げる画像" class="slide__image">
+        </div>
       </div>
     </section>
 
@@ -76,15 +89,14 @@
         <p>※表示価格は全て税込みです</p>
       </div>
       <div class="menu1">
-        <img src="./image/300x300.png" alt="">
+        <img src="./image/煮干しラーメンのメニュー画像.png" alt="煮干しラーメンのメニュー画像">
         <div class="menu1__info">
           <div>
             <h2>煮干しラーメン</h2>
             <h3>並盛り・・・９００円（チャーシュー１枚）</h3>
             <h3>大盛り・・・１，１００円（チャーシュー２枚、味玉）</h3>
             <p>
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              煮干しの旨味を極限まで引き出した、シンプルかつ奥深い一杯。国産煮干しを贅沢に使用し、純粋な煮干しの香りと味わいが口いっぱいに広がります。素材本来の美味しさを感じられる、当店の看板メニューです。
             </p>
           </div>
         </div>
@@ -96,23 +108,21 @@
             <h3>並盛り・・・９００円（チャーシュー１枚）</h3>
             <h3>大盛り・・・１，１００円（チャーシュー２枚、味玉）</h3>
             <p>
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              煮干しの風味に鳥白湯スープのまろやかさを加えた、濃厚で深みのあるスープが特徴。煮干しの力強い旨味と、鳥白湯のコクが絶妙に絡み合う贅沢な一杯。食べ応えのある、ボリューム満点のラーメンです。
             </p>
           </div>
         </div>
-        <img src="./image/300x300.png" alt="">
+        <img src="./image/濃厚煮干しラーメンの画像.png" alt="濃厚煮干しラーメンのメニュー画像">
       </div>
       <div class="menu1">
-        <img src="./image/300x300.png" alt="">
-        <div class="menu3__info">
+        <img src="./image/煮干しラーメン灰の画像.png" alt="煮干しラーメン灰のメニュー画像">
+        <div class="menu1__info">
           <div>
             <h2>煮干しラーメン 灰</h2>
             <h3>並盛り・・・１，０００円（チャーシュー１枚）</h3>
             <h3>大盛り・・・１，２００円（チャーシュー２枚、味玉）</h3>
             <p>
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              見た目のインパクトと味の奥深さが光る一杯。灰色のスープは、セメント系煮干しラーメン特有の濃厚さと、煮干しの強烈な旨味が凝縮されています。煮干し好きな方にはたまらない、クセになる一杯です。
             </p>
           </div>
         </div>
@@ -230,5 +240,10 @@
       </a>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="./JS/slick.js"></script>
 </body>
+
 </html>
