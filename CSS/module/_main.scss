@@ -1,6 +1,7 @@
 @use '../setting/config';
 
-// ----カルーセル---- ※将来的にカルーセルにする
+
+// ----カルーセル----
 .slide--wrap {
   width: 100%;
   margin: 0 auto 100px auto;
@@ -11,256 +12,274 @@
   }
 }
 
-// ----煮焚きのこだわりセクション----
-.commitment {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+@include config.mq(pc) {
 
-  // タイトル
-  .title--wrap {
-    display: flex;
-    justify-content: center;
-    flex-flow: column;
-    align-items: center;
-    background-image: url(/image/名称未設定のデザイン\ \(1\).png);
-    background-size: auto auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 200px;
-    margin-bottom: 30px;
+  // ----煮焚きのこだわりセクション----
+  .commitment {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    // タイトル
+    .title--wrap {
+      display: flex;
+      justify-content: center;
+      flex-flow: column;
+      align-items: center;
+      background-image: url(/image/名称未設定のデザイン\ \(1\).png);
+      background-size: auto auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 200px;
+      margin-bottom: 30px;
+    }
   }
-}
 
-.title--ja {
-  @include config.title-format(2.5rem);
-}
+  .title--ja {
+    @include config.title-format(2.5rem);
+  }
 
-.title--en {
-  @include config.title-format(1rem);
-}
+  .title--en {
+    @include config.title-format(1rem);
+  }
 
-// こだわり大枠
-.commitment--wrap {
-  display: flex;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
-}
+  // こだわり大枠
+  .commitment--wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-//左側のこだわり 
-.left--wrap {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin-right: 5%;
-}
+  //左側のこだわり 
+  .left--wrap {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-right: 5%;
+  }
 
-.left__content{
-  padding: 2%;
-  margin-bottom: 5%;
-  background-color: rgba(238,238,238,0.5);
-}
+  .left__content {
+    padding: 2%;
+    margin-bottom: 5%;
+    background-color: rgba(238, 238, 238, 0.5);
+  }
 
-// 右側のこだわり
-.right--wrap {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin-top: 150px;
-}
+  // 右側のこだわり
+  .right--wrap {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 150px;
+  }
 
-.right__content{
-  padding: 2%;
-  margin-bottom: 5%;
-  background-color: rgba(238,238,238,0.5);
-}
-
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
-
-// ----お品書きセクション----
-.menu {
-  width: 90%;
-  margin: 30px auto 30px auto;
-}
-
-.menu-title {
-  margin-bottom: 30px;
-}
-
-// 煮干しラーメン、煮干しラーメン 炭
-.menu1 {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-bottom: 100px;
+  .right__content {
+    padding: 2%;
+    margin-bottom: 5%;
+    background-color: rgba(238, 238, 238, 0.5);
+  }
 
   img {
-    object-fit: cover;
-    width: 50%;
-    margin: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
   }
-}
 
-.menu1__info {
-  width: 700px;
-  height: max-content;
-  padding: 10px;
-  margin: auto ;
-  background-color: #f2f2df;
-  box-shadow: 10px 10px #EEEEEE;
-  
-  div {
-    width: 80%;
-    margin:auto;
+  // ----お品書きセクション----
+  .menu {
+    width: 90%;
+    margin: 30px auto 30px auto;
   }
-}
 
-// 濃厚煮干しラーメン
-.menu2 {
-  display: flex;
-  flex-wrap: wrap-reverse;
-  justify-content: space-around;
-  width: 90%;
-  margin: 0 auto 100px auto;
+  .menu-title {
+    margin-bottom: 30px;
+  }
 
-  .menu2__info {
+  // 煮干しラーメン、煮干しラーメン 炭
+  .menu1 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+
+    img {
+      object-fit: cover;
+      width: 50%;
+      margin: 0;
+    }
+  }
+
+  .menu1__info {
     width: 700px;
     height: max-content;
     padding: 10px;
     margin: auto;
     background-color: #f2f2df;
     box-shadow: 10px 10px #EEEEEE;
-  
+
     div {
       width: 80%;
+      margin: auto;
+    }
+  }
+
+  // 濃厚煮干しラーメン
+  .menu2 {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto 100px auto;
+
+    .menu2__info {
+      width: 700px;
+      height: max-content;
+      padding: 10px;
+      margin: auto;
+      background-color: #f2f2df;
+      box-shadow: 10px 10px #EEEEEE;
+
+      div {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    img {
+      width: 45%;
+      margin: 0;
+      object-fit: cover;
+    }
+  }
+
+
+  // サイドメニュー
+  .menu-side {
+    margin: 0 auto 30px auto;
+    // height: 500px;
+
+    h2 {
+      width: 90%;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    div {
+      width: 90%;
       margin-left: auto;
       margin-right: auto;
     }
   }
 
-  img {
-    width: 45%;
-    margin: 0;
-    object-fit: cover;
-  }
-}
+  // リスト
 
-
-// サイドメニュー
-.menu-side {
-  margin: 0 auto 30px auto;
-  // height: 500px;
-
-  h2 {
-    width: 90%;
-    margin-inline: auto;
-    text-align: center;
-  }
-
-  div {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-// リスト
-
-.menu-side--wrap {
-  display: flex;
-  justify-content: center;
-  
-
-  .rise {
-    width: 500px;
-    margin: 0;
-    padding-left: 70px;
-  }
-
-  .topping {
-    width: 500px;
-    margin: 0;
-  }
-}
-
-.dl-menu {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  border-bottom: 1px solid #c2c2c2;
-
-  span {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-}
-
-// ----店舗情報セクション----
-
-//セクション
-.shop {
-  width: 90%;
-  margin: 30px auto 30px auto;
-}
-
-// タイトル
-.shop-title {
-  margin: 30px auto;
-
-  .shop-title--ja {
-    text-align: center;
-  }
-
-  .shop-title--en {
-    text-align: center;
-  }
-}
-
-
-//店舗情報
-.shop-info {
-  width: 100%;
-
-  dl {
+  .menu-side--wrap {
     display: flex;
-    width: 800px;
-    margin-inline: auto;
-    border-bottom: 1px solid #c2c2c2;
+    justify-content: center;
 
-    dt {
-      width: 170px;
+
+    .rise {
+      width: 500px;
+      margin: 0;
+      padding-left: 70px;
+    }
+
+    .topping {
+      width: 500px;
+      margin: 0;
     }
   }
+
+  .dl-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    border-bottom: 1px solid #c2c2c2;
+
+    span {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }
+
+  // ----店舗情報セクション----
+
+  //セクション
+  .shop {
+    width: 90%;
+    margin: 30px auto 30px auto;
+  }
+
+  // タイトル
+  .shop-title {
+    margin: 30px auto;
+
+    .shop-title--ja {
+      text-align: center;
+    }
+
+    .shop-title--en {
+      text-align: center;
+    }
+  }
+
+
+  //店舗情報
+  .shop-info {
+    width: 100%;
+
+    dl {
+      display: flex;
+      width: 800px;
+      margin-inline: auto;
+      border-bottom: 1px solid #c2c2c2;
+
+      dt {
+        width: 170px;
+      }
+    }
+  }
+
+  // ----店舗情報セクション----
+  .map {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .map-title--wrap {
+    width: 100%;
+
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  iframe {
+    display: block;
+    width: 100%;
+    margin: 30px auto 30px auto;
+  }
 }
 
-// ----店舗情報セクション----
-.map{
-  width: 90%;
-  margin-inline:auto;
-}
+@include config.mq(sp) {
 
-.map-title--wrap{
-  width: 100%;
+  .title--wrap {
+    width: 100%;
+  }
 
-  h1{
+  .title--ja {
     text-align: center;
   }
 
-  p{
+  .title--en {
     text-align: center;
   }
-}
 
-
-iframe{
-  display: block;
-  width: 100%;
-  margin: 30px auto 30px auto;
 }

@@ -14,17 +14,29 @@
 </head>
 
 <body>
-  <header>
-    <div class="header--wrap">
-      <img src="./image/煮干しラーメン煮焚きロゴ.png" alt="煮干しラーメン専門店 煮焚き" class="header__logo">
-      <ul class="nav--pc">
-        <li><a href="#index.html">ホーム<span>HOME</span></a></li>
-        <li><a href="#commitment">煮焚のこだわり<span>COMMITMENT</span></a></li>
-        <li><a href="#menu">お品書き<span>MENU</span></a></li>
-        <li><a href="#shop">店舗情報<span>SHOP</span></a></li>
-        <li><a href="#map">地図<span>MAP</span></a></li>
-        <li><a href="#">お問い合わせ<span>CONTACT</span></a></li>
-      </ul>
+  <header id="#top">
+    <div class="header-wrap">
+      <div class="header-logo__box">
+        <img src="./image/煮干しラーメン煮焚きロゴ.png" alt="煮干しラーメン専門店 煮焚き" class="header-logo">
+      </div>
+      <!-- SP用ハンバーガーメニュー -->
+      <button class="hamburger-menu" id="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- PC用ナビゲーションメニュー -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="#index.html">ホーム<span>HOME</span></a></li>
+          <li><a href="#commitment">煮焚のこだわり<span>COMMITMENT</span></a></li>
+          <li><a href="#menu">お品書き<span>MENU</span></a></li>
+          <li><a href="#shop">店舗情報<span>SHOP</span></a></li>
+          <li><a href="#map">地図<span>MAP</span></a></li>
+          <li><a href="#">お問い合わせ<span>CONTACT</span></a></li>
+        </ul>
+      </nav>
     </div>
   </header>
   <main>
@@ -229,7 +241,7 @@
     </section>
   </main>
   <footer class="footer">
-    <a href="" class="btn-top">ページ上部へ戻る</a>
+    <a href="#top" class="btn-top">ページ上部へ戻る</a>
     <small class="copyright">&copy;2024 煮干しラーメン 煮焚き All rights reserved.</small>
     <div class="logo__area">
       <a href="#">
@@ -243,6 +255,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./JS/main.js"></script>
   <script type="text/javascript" src="./JS/slick.js"></script>
 </body>
 
