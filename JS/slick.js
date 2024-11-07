@@ -8,4 +8,5 @@ $('.slide--wrap').slick({
   fade:true,
   speed:1000,
   cssEase: 'ease-in-out',
+  
 });

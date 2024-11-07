@@ -1,18 +1,18 @@
 @use '../setting/config';
 
 
-// ----カルーセル----
-.slide--wrap {
-  width: 100%;
-  margin: 0 auto 100px auto;
-
-  .slide__image {
-    display: block;
-    width: 100%;
-  }
-}
-
 @include config.mq(pc) {
+
+  // ----カルーセル----
+  .slide--wrap {
+    width: 100%;
+    margin: 0 auto 100px auto;
+
+    .slide__image {
+      display: block;
+      width: 100%;
+    }
+  }
 
   // ----煮焚きのこだわりセクション----
   .commitment {
@@ -21,7 +21,7 @@
     margin-right: auto;
 
     // タイトル
-    .title--wrap {
+    .commitment-title {
       display: flex;
       justify-content: center;
       flex-flow: column;
@@ -104,15 +104,23 @@
     flex-wrap: wrap;
     margin-bottom: 100px;
 
-    img {
+    .niboshi-ramen-img {
       object-fit: cover;
       width: 50%;
       margin: 0;
+      filter: drop-shadow(0 0 10px #c2c2c2);
+    }
+
+    .niboshi-ramen-hai {
+      object-fit: cover;
+      width: 50%;
+      margin: 0;
+      filter: drop-shadow(0 0 10px #c2c2c2);
     }
   }
 
   .menu1__info {
-    width: 700px;
+    width: 500px;
     height: max-content;
     padding: 10px;
     margin: auto;
@@ -122,6 +130,11 @@
     div {
       width: 80%;
       margin: auto;
+
+      h3>span {
+        font-size: 15px;
+        opacity: .7;
+      }
     }
   }
 
@@ -134,7 +147,7 @@
     margin: 0 auto 100px auto;
 
     .menu2__info {
-      width: 700px;
+      width: 500px;
       height: max-content;
       padding: 10px;
       margin: auto;
@@ -145,6 +158,11 @@
         width: 80%;
         margin-left: auto;
         margin-right: auto;
+
+        h3>span {
+          font-size: 15px;
+          opacity: .7;
+        }
       }
     }
 
@@ -152,6 +170,7 @@
       width: 45%;
       margin: 0;
       object-fit: cover;
+      filter: drop-shadow(0 10px 10px #c2c2c2);
     }
   }
 
@@ -270,8 +289,49 @@
 
 @include config.mq(sp) {
 
-  .title--wrap {
+  // ----カルーセル----
+  .slide--wrap {
     width: 100%;
+    margin: 0 auto;
+
+
+    .slide__image {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  //  ----煮焚きのこだわりセクション----
+  .commitment {
+    position: relative;
+  }
+
+  .commitment-title {
+    width: 100%;
+    margin: 10px auto;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 1%;
+      left: 10%;
+      width: 50px;
+      height: 2px;
+      background-color: #c2c2c2;
+
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 1%;
+      right: 10%;
+      display: inline-block;
+      width: 50px;
+      height: 2px;
+      background-color: #c2c2c2;
+    }
   }
 
   .title--ja {
@@ -280,6 +340,145 @@
 
   .title--en {
     text-align: center;
+    opacity: .7;
   }
 
+  .commitment--wrap {
+    width: 100%;
+  }
+
+  .left__content {
+    img {
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      margin: 0 10px 10px 10px;
+      letter-spacing: 2px;
+    }
+  }
+
+  .right--wrap {
+    width: 100%;
+  }
+
+  .right__content {
+    img {
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      margin: 0 10px 10px 10px;
+      letter-spacing: 2px;
+    }
+
+    .h2 {
+      font-size: 22px;
+    }
+  }
+
+  // ----お品書きセクション----
+  .menu {
+    width: 100%;
+  }
+
+  .menu-title>p {
+    text-align: center;
+  }
+
+  // 煮干しラーメン //煮干しラーメン 灰
+  .menu1 {
+    margin-bottom: 30px;
+
+    img {
+      width: 100%;
+      filter: drop-shadow(0 0 10px #c2c2c2);
+    }
+
+    .menu1__info {
+      margin: 0 10px;
+      background-color: #f2f2df;
+      box-shadow: 0 0 10px #c2c2c2;
+
+      div {
+        width: 90%;
+        margin: 0 auto;
+
+        h2 {
+          text-align: center;
+          margin-bottom: 10px;
+        }
+
+        h3 {
+          margin: 0 0 10px 60px;
+
+          span {
+            opacity: .7;
+          }
+        }
+
+        p {
+          padding-bottom: 10px;
+          font-weight: bold;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+
+  // 濃厚煮干しラーメン
+  .menu2 {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 10px;
+  }
+
+  .menu2__info {
+    margin: 0 10px;
+    background-color: #f2f2df;
+    box-shadow: 0 0 10px #c2c2c2;
+
+    div {
+      width: 90%;
+      margin: 0 auto;
+
+      h2 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        margin: 0 0 10px 60px;
+
+        span {
+          opacity: .7;
+        }
+      }
+
+      p {
+        padding-bottom: 10px;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  .nouko-niboshi-ramen-img {
+    width: 100%;
+    filter: drop-shadow(0 0 10px #c2c2c2);
+  }
+
+  iframe {
+    display: block;
+    width: 100%;
+    margin: 30px auto 30px auto;
+  }
 }

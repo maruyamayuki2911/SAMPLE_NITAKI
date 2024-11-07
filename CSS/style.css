@@ -1,5 +1,7 @@
 @charset "UTF-8";
-h1 {
+h1,
+h2,
+h3 {
   margin: 0;
 }
 
@@ -11,11 +13,17 @@ a {
   text-decoration: none;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 li {
   list-style-type: none;
 }
 
-body, html {
+body,
+html {
   font-family: "Sawarabi Mincho", serif;
   font-weight: 400;
   font-style: normal;
@@ -102,9 +110,6 @@ body, html {
     width: 100%;
     background-color: #EEEEEE;
   }
-  .header-wrap {
-    position: relative;
-  }
   .header-logo {
     width: 100%;
   }
@@ -113,7 +118,7 @@ body, html {
     --rotate: 0;
     --translate: .5rem;
     z-index: 100;
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 10px;
     display: grid;
@@ -162,7 +167,7 @@ body, html {
     transition-property: all;
     transition-duration: 0.4s;
     background-color: #222222;
-    width: 200px;
+    width: 100%;
     height: 100vh;
   }
   .nav-menu.is-active {
@@ -178,22 +183,21 @@ body, html {
     display: block;
   }
 }
-.slide--wrap {
-  width: 100%;
-  margin: 0 auto 100px auto;
-}
-.slide--wrap .slide__image {
-  display: block;
-  width: 100%;
-}
-
 @media screen and (min-width: 891px) {
+  .slide--wrap {
+    width: 100%;
+    margin: 0 auto 100px auto;
+  }
+  .slide--wrap .slide__image {
+    display: block;
+    width: 100%;
+  }
   .commitment {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
   }
-  .commitment .title--wrap {
+  .commitment .commitment-title {
     display: flex;
     justify-content: center;
     flex-flow: column;
@@ -263,13 +267,20 @@ body, html {
     flex-wrap: wrap;
     margin-bottom: 100px;
   }
-  .menu1 img {
+  .menu1 .niboshi-ramen-img {
     object-fit: cover;
     width: 50%;
     margin: 0;
+    filter: drop-shadow(0 0 10px #c2c2c2);
+  }
+  .menu1 .niboshi-ramen-hai {
+    object-fit: cover;
+    width: 50%;
+    margin: 0;
+    filter: drop-shadow(0 0 10px #c2c2c2);
   }
   .menu1__info {
-    width: 700px;
+    width: 500px;
     height: max-content;
     padding: 10px;
     margin: auto;
@@ -280,6 +291,10 @@ body, html {
     width: 80%;
     margin: auto;
   }
+  .menu1__info div h3 > span {
+    font-size: 15px;
+    opacity: 0.7;
+  }
   .menu2 {
     display: flex;
     flex-wrap: wrap-reverse;
@@ -288,7 +303,7 @@ body, html {
     margin: 0 auto 100px auto;
   }
   .menu2 .menu2__info {
-    width: 700px;
+    width: 500px;
     height: max-content;
     padding: 10px;
     margin: auto;
@@ -300,10 +315,15 @@ body, html {
     margin-left: auto;
     margin-right: auto;
   }
+  .menu2 .menu2__info div h3 > span {
+    font-size: 15px;
+    opacity: 0.7;
+  }
   .menu2 img {
     width: 45%;
     margin: 0;
     object-fit: cover;
+    filter: drop-shadow(0 10px 10px #c2c2c2);
   }
   .menu-side {
     margin: 0 auto 30px auto;
@@ -386,17 +406,156 @@ body, html {
   }
 }
 @media screen and (max-width: 890px) {
-  .title--wrap {
+  .slide--wrap {
     width: 100%;
+    margin: 0 auto;
+  }
+  .slide--wrap .slide__image {
+    display: block;
+    width: 100%;
+  }
+  .commitment {
+    position: relative;
+  }
+  .commitment-title {
+    width: 100%;
+    margin: 10px auto;
+  }
+  .commitment-title::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 1%;
+    left: 10%;
+    width: 50px;
+    height: 2px;
+    background-color: #c2c2c2;
+  }
+  .commitment-title::after {
+    content: "";
+    position: absolute;
+    top: 1%;
+    right: 10%;
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background-color: #c2c2c2;
   }
   .title--ja {
     text-align: center;
   }
   .title--en {
     text-align: center;
+    opacity: 0.7;
+  }
+  .commitment--wrap {
+    width: 100%;
+  }
+  .left__content img {
+    width: 100%;
+  }
+  .left__content h2 {
+    text-align: center;
+  }
+  .left__content p {
+    margin: 0 10px 10px 10px;
+    letter-spacing: 2px;
+  }
+  .right--wrap {
+    width: 100%;
+  }
+  .right__content img {
+    width: 100%;
+  }
+  .right__content h2 {
+    text-align: center;
+  }
+  .right__content p {
+    margin: 0 10px 10px 10px;
+    letter-spacing: 2px;
+  }
+  .right__content .h2 {
+    font-size: 22px;
+  }
+  .menu {
+    width: 100%;
+  }
+  .menu-title > p {
+    text-align: center;
+  }
+  .menu1 {
+    margin-bottom: 30px;
+  }
+  .menu1 img {
+    width: 100%;
+    filter: drop-shadow(0 0 10px #c2c2c2);
+  }
+  .menu1 .menu1__info {
+    margin: 0 10px;
+    background-color: #f2f2df;
+    box-shadow: 0 0 10px #c2c2c2;
+  }
+  .menu1 .menu1__info div {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .menu1 .menu1__info div h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .menu1 .menu1__info div h3 {
+    margin: 0 0 10px 60px;
+  }
+  .menu1 .menu1__info div h3 span {
+    opacity: 0.7;
+  }
+  .menu1 .menu1__info div p {
+    padding-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  .menu2 {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 10px;
+  }
+  .menu2__info {
+    margin: 0 10px;
+    background-color: #f2f2df;
+    box-shadow: 0 0 10px #c2c2c2;
+  }
+  .menu2__info div {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .menu2__info div h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .menu2__info div h3 {
+    margin: 0 0 10px 60px;
+  }
+  .menu2__info div h3 span {
+    opacity: 0.7;
+  }
+  .menu2__info div p {
+    padding-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  .nouko-niboshi-ramen-img {
+    width: 100%;
+    filter: drop-shadow(0 0 10px #c2c2c2);
+  }
+  iframe {
+    display: block;
+    width: 100%;
+    margin: 30px auto 30px auto;
   }
 }
-h1 {
+h1,
+h2,
+h3 {
   margin: 0;
 }
 
@@ -408,11 +567,17 @@ a {
   text-decoration: none;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 li {
   list-style-type: none;
 }
 
-body, html {
+body,
+html {
   font-family: "Sawarabi Mincho", serif;
   font-weight: 400;
   font-style: normal;
@@ -466,5 +631,17 @@ body, html {
   }
   .btn-top:hover::after {
     transform: scaleX(1);
+  }
+}
+@media screen and (max-width: 890px) {
+  footer {
+    background-color: rgb(22, 11, 11);
+    width: 100%;
+  }
+  .logo-x {
+    width: 10%;
+  }
+  .logo-instagram {
+    width: 10%;
   }
 }

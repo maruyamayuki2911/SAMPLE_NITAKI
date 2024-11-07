@@ -1,5 +1,7 @@
 //リセットCSS
-h1 {
+h1,
+h2,
+h3 {
   margin: 0;
 }
 
@@ -9,6 +11,11 @@ p {
 
 a {
   text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -23,8 +30,8 @@ li {
 }
 
 //全体の設定
-body, html {
-  // overflow-x: hidden; /* 横方向の余白を防ぐ */
+body,
+html {
   @include base-font();
   margin: 0 auto 0 auto;
   max-width: 1700px;

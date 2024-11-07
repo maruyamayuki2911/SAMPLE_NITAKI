@@ -58,3 +58,20 @@
   }
 
 }
+
+
+// スマートフォン用
+@include config.mq(sp) {
+  footer {
+    background-color:rgb(22, 11, 11);
+    width: 100%;
+  }
+
+  .logo-x{
+    width: 10%;
+  }
+
+  .logo-instagram{
+    width: 10%;
+  }
+}
