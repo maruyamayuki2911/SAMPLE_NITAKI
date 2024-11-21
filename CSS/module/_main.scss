@@ -308,7 +308,7 @@
 
   .commitment-title {
     width: 100%;
-    margin: 10px auto;
+    margin: 40px auto;
 
     &::before {
       content: "";
@@ -387,12 +387,51 @@
 
   // ----お品書きセクション----
   .menu {
+    position: relative;
     width: 100%;
   }
 
-  .menu-title>p {
-    text-align: center;
+  .menu-title {
+    width: 100%;
+    margin: 40px auto;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0.6%;
+      left: 10%;
+      width: 50px;
+      height: 2px;
+      background-color: #c2c2c2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0.6%;
+      right: 10%;
+      display: inline-block;
+      width: 50px;
+      height: 2px;
+      background-color: #c2c2c2;
+    }
+
+    .title--ja {
+      text-align: center;
+    }
+
+    .title--en {
+      text-align: center;
+      opacity: .7;
+    }
+
+    p {
+      text-align: center;
+    }
   }
+
+
 
   // 煮干しラーメン //煮干しラーメン 灰
   .menu1 {
@@ -475,6 +514,98 @@
     width: 100%;
     filter: drop-shadow(0 0 10px #c2c2c2);
   }
+
+
+  //サイドメニュー
+  .menu-side {
+    width: 100%;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .rise {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .dl-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    border-bottom: 1px solid #c2c2c2;
+
+    dt>span {
+      font-weight: bold;
+    }
+
+    dd {
+      font-weight: bold;
+    }
+  }
+
+  .topping {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // 店舗情報
+  .shop {
+    position: relative;
+  }
+
+  .shop-title {
+    margin: 40px auto;
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 2.5%;
+      left: 10%;
+      width: 50px;
+      height: 2px;
+      background-color: #c2c2c2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2.5%;
+      right: 10%;
+      display: inline-block;
+      width: 50px;
+      height: 2px;
+      background-color: #c2c2c2;
+    }   
+  }
+
+  .shop-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: auto;
+
+    dl {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+    }
+
+    dt {
+      font-weight: bold;
+    }
+
+    dd {
+      margin: 0;
+      border-bottom: 1px solid #c2c2c2;
+    }
+    
+  }
+
 
   iframe {
     display: block;

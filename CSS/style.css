@@ -108,7 +108,14 @@ html {
 @media screen and (max-width: 890px) {
   header {
     width: 100%;
+    min-height: 100vh;
     background-color: #EEEEEE;
+  }
+  .header-logo__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
   }
   .header-logo {
     width: 100%;
@@ -419,7 +426,7 @@ html {
   }
   .commitment-title {
     width: 100%;
-    margin: 10px auto;
+    margin: 40px auto;
   }
   .commitment-title::before {
     content: "";
@@ -478,9 +485,41 @@ html {
     font-size: 22px;
   }
   .menu {
+    position: relative;
     width: 100%;
   }
-  .menu-title > p {
+  .menu-title {
+    width: 100%;
+    margin: 40px auto;
+  }
+  .menu-title::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0.6%;
+    left: 10%;
+    width: 50px;
+    height: 2px;
+    background-color: #c2c2c2;
+  }
+  .menu-title::after {
+    content: "";
+    position: absolute;
+    top: 0.6%;
+    right: 10%;
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background-color: #c2c2c2;
+  }
+  .menu-title .title--ja {
+    text-align: center;
+  }
+  .menu-title .title--en {
+    text-align: center;
+    opacity: 0.7;
+  }
+  .menu-title p {
     text-align: center;
   }
   .menu1 {
@@ -546,6 +585,79 @@ html {
   .nouko-niboshi-ramen-img {
     width: 100%;
     filter: drop-shadow(0 0 10px #c2c2c2);
+  }
+  .menu-side {
+    width: 100%;
+  }
+  .menu-side h2 {
+    text-align: center;
+  }
+  .rise {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .dl-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    border-bottom: 1px solid #c2c2c2;
+  }
+  .dl-menu dt > span {
+    font-weight: bold;
+  }
+  .dl-menu dd {
+    font-weight: bold;
+  }
+  .topping {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .shop {
+    position: relative;
+  }
+  .shop-title {
+    margin: 40px auto;
+  }
+  .shop-title::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 2.5%;
+    left: 10%;
+    width: 50px;
+    height: 2px;
+    background-color: #c2c2c2;
+  }
+  .shop-title::after {
+    content: "";
+    position: absolute;
+    top: 2.5%;
+    right: 10%;
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background-color: #c2c2c2;
+  }
+  .shop-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: auto;
+  }
+  .shop-info dl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+  .shop-info dt {
+    font-weight: bold;
+  }
+  .shop-info dd {
+    margin: 0;
+    border-bottom: 1px solid #c2c2c2;
   }
   iframe {
     display: block;

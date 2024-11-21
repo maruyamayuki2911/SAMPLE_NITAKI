@@ -98,11 +98,20 @@
 
     header {
         width: 100%;
+        min-height: 100vh;
         background-color: #EEEEEE;
+    }
+
+    .header-logo__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
     }
 
     // ロゴ
     .header-logo {
+        
         width: 100%;
     }
 
