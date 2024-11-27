@@ -16,6 +16,7 @@
     .header-wrap {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
         height: 100%;
         margin-inline: auto;
@@ -42,7 +43,7 @@
     }
 
     // PC用ナビゲーション
-    .nav__list {
+    .nav-menu__list {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -96,22 +97,19 @@
 // スマートフォン用スタイル
 @include config.mq(sp) {
 
+    // ヘッダーレイアウト
     header {
         width: 100%;
         min-height: 100vh;
         background-color: #EEEEEE;
     }
 
+    // ロゴレイアウト
     .header-logo__box {
         display: flex;
         flex-direction: column;
         justify-content: center;
         min-height: 100vh;
-    }
-
-    // ロゴ
-    .header-logo {
-        
         width: 100%;
     }
 
@@ -189,7 +187,7 @@
             visibility: visible;
         }
     }
-    .nav__list {
+    .nav-menu__list {
         width: 100%;
         height: 100%;
         text-align: center;
@@ -198,4 +196,38 @@
             display: block;
         }
     }
+
+    // ナビゲーションメニューリスト
+    .nav-menu__list {
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        align-items: center;
+        margin-top: 15px;
+        
+        li {
+            width: 70%;
+            letter-spacing: 8px;
+            border-bottom: 1px solid white;
+        }
+
+        a {
+            font-size: 1em;
+        }
+
+        a:link {
+            color: white;
+        }
+
+        a:visited {
+            color: white;
+        }
+
+        span {
+            font-size: 0.8em;
+            opacity: 0.6;
+        }
+        
+    }
+
 }

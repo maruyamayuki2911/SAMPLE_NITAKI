@@ -1,4 +1,4 @@
-$('.slide--wrap').slick({
+$('.slide__wrap').slick({
   zIndex:1,
   autoplay: true,
   dots: false,
@@ -8,5 +8,4 @@ $('.slide--wrap').slick({
   fade:true,
   speed:1000,
   cssEase: 'ease-in-out',
-  
 });

@@ -31,14 +31,14 @@
     }
   }
 
-  .btn-top {
+  .top-btn {
     font-size: 1rem;
     position: relative; //子要素にabsoluteをかけるのに必要
     color: white;
   }
 
   //罫線疑似要素 ※初期は非表示
-  .btn-top::after {
+  .top-btn::after {
     content: ''; //コンテンツを配置
     position: absolute; //罫線の絶対位置を設定
     bottom: 0; //線の位置
@@ -53,7 +53,7 @@
   }
 
   //マウスオーバー時、疑似要素を表示
-  .btn-top:hover::after {
+  .top-btn:hover::after {
     transform: scaleX(1); //罫線のX軸の長さを1 ※「1」は元の要素のサイズ
   }
 
@@ -63,15 +63,43 @@
 // スマートフォン用
 @include config.mq(sp) {
   footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color:rgb(22, 11, 11);
     width: 100%;
   }
 
+  .top-btn {
+    order: -1;
+    padding: 10px;
+  }
+  a:link {
+    color: white;
+  }
+  a:visited {
+    color:white;
+  }
+
+  .copyright {
+    order: 1;
+    font-size: 1rem;
+    color: white;
+  }
+
+  .logo-area {
+    order: 0;
+    text-align: center;
+  }
+
   .logo-x{
     width: 10%;
+    padding: 10px;
   }
 
   .logo-instagram{
     width: 10%;
+    padding: 10px;
   }
+
 }
