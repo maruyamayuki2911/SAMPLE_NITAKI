@@ -16,19 +16,19 @@
 <body>
   <header id="header">
     <div class="header-wrap">
-      <div class="header-logo__box">
+      <div class="header__logo-box">
         <img src="./image/煮干しラーメン煮焚きロゴ.png" alt="煮干しラーメン専門店 煮焚き" class="header-logo">
       </div>
       <!-- SP用ハンバーガーメニュー -->
-      <button class="hamburger-menu" id="hamburger-menu">
+      <button class="header__hamburger" id="header__hamburger">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
       <!-- ナビゲーションメニュー -->
-      <nav class="nav-menu" id="nav-menu">
-        <ul class="nav-menu__list" id="nav-menu__list">
+      <nav class="header__nav-menu" id="header__nav-menu">
+        <ul class="header__nav-list" id="header__nav-list">
           <li><a href="#">ホーム<span>HOME</span></a></li>
           <li><a href="#commitment">煮焚のこだわり<span>COMMITMENT</span></a></li>
           <li><a href="#menu">お品書き<span>MENU</span></a></li>
@@ -40,35 +40,35 @@
     </div>
   </header>
   <main>
-    <section id="slide">
-      <div class="slide__wrap">
+    <section id="main-slick">
+      <div class="main-slick__wrap">
         <div>
-          <img src="./image/煮干しラーメン.jpg" alt="煮干しラーメンの画像" class="slide__image">
+          <img src="./image/煮干しラーメン.jpg" alt="煮干しラーメンの画像" class="main-slick__image">
         </div>
         <div>
-          <img src="./image/寸胴でラーメンを茹でる画像.jpg" alt="寸胴でラーメンを茹でる画像" class="slide__image">
+          <img src="./image/寸胴でラーメンを茹でる画像.jpg" alt="寸胴でラーメンを茹でる画像" class="main-slick__image">
         </div>
         <div>
-          <img src="./image/麺を持ち上げる様子.jpg" alt="麺を持ち上げる画像" class="slide__image">
+          <img src="./image/麺を持ち上げる様子.jpg" alt="麺を持ち上げる画像" class="main-slick__image">
         </div>
       </div>
     </section>
 
     <section id="commitment" class="commitment">
       <div class="commitment-title">
-        <h1 class="title--ja">煮焚のこだわり</h1>
-        <p class="title--en">COMMITMENT</p>
+        <h1 class="title--lang-ja">煮焚のこだわり</h1>
+        <p class="title--lang-en">COMMITMENT</p>
       </div>
-      <div class="commitment--wrap">
-        <div class="left--wrap">
-          <div class="left__content">
+      <div class="commitment__wrap">
+        <div class="commitment__left-wrap">
+          <div class="commitment__left-content">
             <img src="./image/ざるに盛られた煮干し.jpg" alt="ざるに盛られた煮干しの画像">
             <h2>厳選した国産煮干し</h2>
             <p>
               最高品質の国産煮干しのみを使用し、豊かな旨味と深いコクを引き出しています。産地にこだわり、毎日新鮮な煮干しを仕入れています。
             </p>
           </div>
-          <div class="left__content">
+          <div class="commitment__left-content">
             <img src="./image/無添加 醤油の画像.jpg" alt="無添加 醤油の画像">
             <h2>無添加・無化調</h2>
             <p>
@@ -76,17 +76,17 @@
             </p>
           </div>
         </div>
-        <div class="right--wrap">
-          <div class="right__content">
+        <div class="commitment__right-wrap">
+          <div class="commitment__right-content">
             <img src="./image/だし汁の画像.jpg" alt="だし汁の画像">
             <h2>二段階のだし取り製法</h2>
             <p>
               煮干しの旨味を最大限に引き出すために、低温でじっくりと煮出す一次だしと、強火で旨味を凝縮する二次だしを使い、スープに深みを持たせています。
             </p>
           </div>
-          <div class="right__content">
+          <div class="commitment__right-content">
             <img src="./image/自家製麺の画像.jpg" alt="自家製麺の画像">
-            <h2 class="h2">自家製麺とスープの絶妙なバランス</h2>
+            <h2>自家製麺とスープの絶妙なバランス</h2>
             <p>
               煮干しスープと合うように特別に作られた自家製麵。スープと麺が一体となるような食感と味わいを追及しています。
             </p>
@@ -96,13 +96,13 @@
     </section>
     <section id="menu" class="menu">
       <div class="menu-title">
-        <h1 class="title--ja">お品書き</h1>
-        <p class="title--en">MENU</p>
+        <h1 class="title--lang-ja">お品書き</h1>
+        <p class="title--lang-en">MENU</p>
         <p>※表示価格は全て税込みです</p>
       </div>
-      <div class="menu1">
+      <div class="menu-area--niboshi">
         <img src="./image/煮干しラーメンのメニュー画像.png" alt="煮干しラーメンのメニュー画像" class="niboshi-ramen-img">
-        <div class="menu1__info">
+        <div class="menu-info--niboshi">
           <div>
             <h2>煮干しラーメン</h2>
             <h3>並盛り・・・９００円<br><span>(チャーシュー１枚)</span></h3>
@@ -113,8 +113,8 @@
           </div>
         </div>
       </div>
-      <div class="menu2">
-        <div class="menu2__info">
+      <div class="menu-area--rich-niboshi">
+        <div class="menu-info--rich-niboshi">
           <div>
             <h2>濃厚煮干しラーメン</h2>
             <h3>並盛り・・・９００円<br><span>(チャーシュー１枚)</span></h3>
@@ -126,9 +126,9 @@
         </div>
         <img src="./image/濃厚煮干しラーメンの画像.png" alt="濃厚煮干しラーメンのメニュー画像" class="nouko-niboshi-ramen-img">
       </div>
-      <div class="menu1">
+      <div class="menu-area--gray-niboshi">
         <img src="./image/煮干しラーメン灰の画像.png" alt="煮干しラーメン灰のメニュー画像" class="niboshi-ramen-hai">
-        <div class="menu1__info">
+        <div class="menu-info--gray-niboshi">
           <div>
             <h2>煮干しラーメン 灰</h2>
             <h3>並盛り・・・１，０００円<br><span>(チャーシュー１枚)</span></h3>
@@ -139,47 +139,47 @@
           </div>
         </div>
       </div>
-      <div class="menu-side">
+      <div class="side-menu">
         <h2>サイドメニュー</h2>
-        <div class="menu-side--wrap">
-          <div class="rise">
-            <dl class="dl-menu">
+        <div class="side-menu__wrap">
+          <div class="side-menu__rise">
+            <dl class="side-menu__item">
               <dt><span>ご飯物</span></dt>
             </dl>
-            <dl class="dl-menu">
+            <dl class="side-menu__item">
               <dt>チャーシュー丼(小)</dt>
               <dd>４００円</dd>
             </dl>
-            <dl class="dl-menu">
+            <dl class="side-menu__item">
               <dt>煮干しチャーハン(小)</dt>
               <dd>５００円</dd>
             </dl>
-            <dl class="dl-menu">
+            <dl class="side-menu__item">
               <dt>ご飯</dt>
               <dd>１００円</dd>
             </dl>
           </div>
-          <div class="topping">
-            <dl class="dl-menu">
+          <div class="side-menu__topping">
+            <dl class="side-menu__item">
               <dt><span>トッピング</span></dt>
             </dl>
-            <dl class="dl-menu">
+            <dl class="side-menu__item">
               <dt>チャーシュー(１枚)</dt>
               <dd>１００円</dd>
             </dl>
-            <dl class="dl-menu">
+            <dl class="side-menu__item">
               <dt>ネギ</dt>
               <dd>１００円</dd>
             </dl>
-            <dl class="dl-menu">
+            <dl class="side-menu__item">
               <dt>メンマ</dt>
               <dd>１００円</dd>
             </dl>
-            <dl class="dl-menu">
+            <dl class="side-menu__item">
               <dt>味玉</dt>
               <dd>１００円</dd>
             </dl>
-            <dl class="dl-menu">
+            <dl class="side-menu__item">
               <dt>煮干玉(煮干しペースト)</dt>
               <dd>１００円</dd>
             </dl>
@@ -189,8 +189,8 @@
     </section>
     <section id="shop" class="shop">
       <div class="shop-title">
-        <h1 class="title--ja shop-title--ja">店舗情報</h1>
-        <p class="title--en shop-title--en">SHOP</p>
+        <h1 class="title--lang-ja">店舗情報</h1>
+        <p class="title--lang-en">SHOP</p>
       </div>
       <div class="shop-info">
         <dl>
@@ -230,9 +230,9 @@
       </div>
     </section>
     <section id="map" class="map">
-      <div class="map-title-area">
-        <h1 class="title--ja">地図</h1>
-        <p class="title--en">MAP</p>
+      <div class="map-title">
+        <h1 class="title--lang-ja">地図</h1>
+        <p class="title--lang-en">MAP</p>
       </div>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.9143184341533!2d139.54794909996946!3d35.62983871950759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f0f36ab7d075%3A0xcb377c9305356a0b!2z44CSMjE0LTAwMTIg56We5aWI5bed55yM5bed5bSO5biC5aSa5pGp5Yy65Lit6YeO5bO277yT5LiB55uu77yR77yU!5e0!3m2!1sja!2sjp!4v1726995522097!5m2!1sja!2sjp"
@@ -241,14 +241,14 @@
     </section>
   </main>
   <footer class="footer">
-    <a href="#" class="top-btn">ページ上部へ戻る</a>
-    <small class="copyright">&copy;2024 煮干しラーメン 煮焚き All rights reserved.</small>
-    <div class="logo-area">
-      <a href="#">
-        <img src="./image/logo-white.png" alt="エックスのロゴ" class="logo-x">
+    <a href="#" class="footer__top-btn">ページ上部へ戻る</a>
+    <small class="footer__copyright">&copy;2024 煮干しラーメン 煮焚き All rights reserved.</small>
+    <div class="footer__sns-area">
+      <a href="https://x.com">
+        <img src="./image/logo-white.png" alt="エックスのリンク" class="footer__logo--x">
       </a>
-      <a href="#">
-        <img src="./image/Instagram_Glyph_Gradient.png" alt="インスタグラムのロゴ" class="logo-instagram">
+      <a href="https://www.instagram.com">
+        <img src="./image/Instagram_Glyph_Gradient.png" alt="インスタグラムのリンク" class="footer__logo--instagram">
       </a>
     </div>
   </footer>

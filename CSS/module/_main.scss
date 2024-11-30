@@ -1,22 +1,38 @@
 @use '../setting/config';
+@use '../mixin/mixin';
 
 
-@include config.mq(pc) {
+@include mixin.mq(pc) {
 
-  // ----カルーセル----
-  .slide__wrap {
+  // 各セクションタイトル
+  .title--lang-ja {
+    @include mixin.title-format(2.5rem);
+  }
+
+  .title--lang-en {
+    @include mixin.title-format(1rem);
+  }
+
+
+  // ----カルーセルセクション----
+
+  // カルーセルレイアウト
+  .main-slick__wrap {
     width: 100%;
     margin: 0 auto 100px auto;
 
-    .slide__image {
+    // カルーセル画像
+    .main-slick__image {
       display: block;
       width: 100%;
       height: calc(100vh - 100px);
       object-fit: cover;
     }
   }
-  
+
   // ----煮焚きのこだわりセクション----
+
+  // こだわりセクションレイアウト
   .commitment {
     width: 90%;
     margin-left: auto;
@@ -28,7 +44,7 @@
       justify-content: center;
       flex-flow: column;
       align-items: center;
-      background-image: url(/image/名称未設定のデザイン\ \(1\).png);
+      background-image: url(/image/タイトル背景.png);
       background-size: auto auto;
       background-position: center;
       background-repeat: no-repeat;
@@ -38,45 +54,37 @@
     }
   }
 
-  .title--ja {
-    @include config.title-format(2.5rem);
-  }
-
-  .title--en {
-    @include config.title-format(1rem);
-  }
-
-  // こだわり大枠
-  .commitment--wrap {
+  // こだわりレイアウト
+  .commitment__wrap {
     display: flex;
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
   }
 
-  //左側のこだわり 
-  .left--wrap {
+  //左側のこだわりレイアウト
+  .commitment__left-wrap {
     display: flex;
     flex-direction: column;
     width: 50%;
     margin-right: 5%;
   }
 
-  .left__content {
+  .commitment__left-content {
     padding: 2%;
     margin-bottom: 5%;
     background-color: rgba(238, 238, 238, 0.5);
   }
 
-  // 右側のこだわり
-  .right--wrap {
+  // 右側のこだわりレイアウト
+  .commitment__right-wrap {
     display: flex;
     flex-direction: column;
     width: 50%;
     margin-top: 150px;
   }
 
-  .right__content {
+  .commitment__right-content {
     padding: 2%;
     margin-bottom: 5%;
     background-color: rgba(238, 238, 238, 0.5);
@@ -90,6 +98,8 @@
   }
 
   // ----お品書きセクション----
+
+  // お品書きセクションレイアウト
   .menu {
     width: 90%;
     margin: 30px auto 30px auto;
@@ -99,21 +109,14 @@
     margin-bottom: 30px;
   }
 
-  // 煮干しラーメン、煮干しラーメン 炭
-  .menu1 {
+  // 煮干しラーメン
+  .menu-area--niboshi {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin-bottom: 100px;
 
-    .niboshi-ramen-img {
-      object-fit: cover;
-      width: 50%;
-      margin: 0;
-      filter: drop-shadow(0 0 10px #c2c2c2);
-    }
-
-    .niboshi-ramen-hai {
+    img {
       object-fit: cover;
       width: 50%;
       margin: 0;
@@ -121,13 +124,13 @@
     }
   }
 
-  .menu1__info {
+  .menu-info--niboshi {
     width: 500px;
     height: max-content;
     padding: 10px;
     margin: auto;
     background-color: #f2f2df;
-    box-shadow: 10px 10px #EEEEEE;
+    box-shadow: 0 0 10px #c2c2c2;
 
     div {
       width: 80%;
@@ -141,20 +144,20 @@
   }
 
   // 濃厚煮干しラーメン
-  .menu2 {
+  .menu-area--rich-niboshi {
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: space-around;
     width: 90%;
     margin: 0 auto 100px auto;
 
-    .menu2__info {
+    .menu-info--rich-niboshi {
       width: 500px;
       height: max-content;
       padding: 10px;
       margin: auto;
       background-color: #f2f2df;
-      box-shadow: 10px 10px #EEEEEE;
+      box-shadow: 0 0 10px #c2c2c2;
 
       div {
         width: 80%;
@@ -176,9 +179,49 @@
     }
   }
 
+  // 煮干しラーメン　灰
+  .menu-area--gray-niboshi {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
 
-  // サイドメニュー
-  .menu-side {
+    img {
+      object-fit: cover;
+      width: 50%;
+      padding: 0 5% 0 5%;
+      filter: drop-shadow(0 0 10px #c2c2c2);
+    }
+
+    .niboshi-ramen-hai {
+      object-fit: cover;
+      width: 40%;
+      margin: 0;
+      filter: drop-shadow(0 0 10px #c2c2c2);
+    }
+  }
+
+  .menu-info--gray-niboshi {
+    width: 500px;
+    height: max-content;
+    padding: 10px;
+    margin: auto;
+    background-color: #f2f2df;
+    box-shadow: 0 0 10px #c2c2c2;
+
+    div {
+      width: 80%;
+      margin: auto;
+
+      h3>span {
+        font-size: 15px;
+        opacity: .7;
+      }
+    }
+  }
+
+  // サイドメニューレイアウト
+  .side-menu {
     margin: 0 auto 30px auto;
     // height: 500px;
 
@@ -195,26 +238,24 @@
     }
   }
 
-  // リスト
-
-  .menu-side--wrap {
+  // サイドメニュー
+  .side-menu__wrap {
     display: flex;
     justify-content: center;
 
-
-    .rise {
+    .side-menu__rise {
       width: 500px;
       margin: 0;
       padding-left: 70px;
     }
 
-    .topping {
+    .side-menu__topping {
       width: 500px;
       margin: 0;
     }
   }
 
-  .dl-menu {
+  .side-menu__item {
     display: flex;
     justify-content: space-between;
     width: 80%;
@@ -228,21 +269,21 @@
 
   // ----店舗情報セクション----
 
-  //セクション
+  //店舗情報セクションレイアウト
   .shop {
     width: 90%;
     margin: 30px auto 30px auto;
   }
 
-  // タイトル
+  // タイトルレイアウト
   .shop-title {
     margin: 30px auto;
 
-    .shop-title--ja {
+    h1 {
       text-align: center;
     }
 
-    .shop-title--en {
+    p {
       text-align: center;
     }
   }
@@ -264,13 +305,15 @@
     }
   }
 
-  // ----店舗情報セクション----
+  // ----地図セクション----
+
+  // 地図セクションレイアウト
   .map {
     width: 90%;
-    margin-inline: auto;
+    margin: 30px auto 30px auto;
   }
 
-  .map-title-area {
+  .map-title {
     width: 100%;
 
     h1 {
@@ -282,6 +325,7 @@
     }
   }
 
+  // Google map
   iframe {
     display: block;
     width: 100%;
@@ -289,25 +333,39 @@
   }
 }
 
-@include config.mq(sp) {
+@include mixin.mq(sp) {
+
+  // 各セクションのタイトル
+  .title--lang-ja {
+    text-align: center;
+  }
+
+  .title--lang-en {
+    text-align: center;
+    opacity: .7;
+  }
+
 
   // ----カルーセル----
-  .slide__wrap {
+  .main-slick__wrap {
     width: 100%;
     margin: 0 auto;
 
-
-    .slide__image {
+    // カルーセル画像
+    .main-slick__image {
       display: block;
       width: 100%;
     }
   }
 
   //  ----煮焚きのこだわりセクション----
+
+  // こだわりセクションレイアウト
   .commitment {
     position: relative;
   }
 
+  // タイトルレイアウト
   .commitment-title {
     width: 100%;
     margin: 40px auto;
@@ -321,7 +379,6 @@
       width: 50px;
       height: 2px;
       background-color: #c2c2c2;
-
     }
 
     &::after {
@@ -336,20 +393,13 @@
     }
   }
 
-  .title--ja {
-    text-align: center;
-  }
-
-  .title--en {
-    text-align: center;
-    opacity: .7;
-  }
-
-  .commitment--wrap {
+  // こだわりレイアウト
+  .commitment__wrap {
     width: 100%;
   }
 
-  .left__content {
+  // 左側のこだわり
+  .commitment__left-content {
     img {
       width: 100%;
     }
@@ -364,11 +414,12 @@
     }
   }
 
-  .right--wrap {
+  // 右側のこだわり
+  .commitment__right-wrap {
     width: 100%;
   }
 
-  .right__content {
+  .commitment__right-content {
     img {
       width: 100%;
     }
@@ -380,19 +431,18 @@
     p {
       margin: 0 10px 10px 10px;
       letter-spacing: 2px;
-    }
-
-    .h2 {
-      font-size: 22px;
     }
   }
 
   // ----お品書きセクション----
+
+  // お品書きセクションレイアウト
   .menu {
     position: relative;
     width: 100%;
   }
 
+  // タイトル
   .menu-title {
     width: 100%;
     margin: 40px auto;
@@ -419,24 +469,14 @@
       background-color: #c2c2c2;
     }
 
-    .title--ja {
-      text-align: center;
-    }
-
-    .title--en {
-      text-align: center;
-      opacity: .7;
-    }
-
+    // 消費税案内
     p {
       text-align: center;
     }
   }
 
-
-
-  // 煮干しラーメン //煮干しラーメン 灰
-  .menu1 {
+  // 煮干しラーメン 
+  .menu-area--niboshi {
     margin-bottom: 30px;
 
     img {
@@ -444,7 +484,7 @@
       filter: drop-shadow(0 0 10px #c2c2c2);
     }
 
-    .menu1__info {
+    .menu-info--niboshi {
       margin: 0 10px;
       background-color: #f2f2df;
       box-shadow: 0 0 10px #c2c2c2;
@@ -459,7 +499,7 @@
         }
 
         h3 {
-          margin: 0 0 10px 60px;
+          text-align: center;
 
           span {
             opacity: .7;
@@ -467,7 +507,7 @@
         }
 
         p {
-          padding-bottom: 10px;
+          padding: 10px;
           font-weight: bold;
           letter-spacing: 2px;
         }
@@ -476,13 +516,19 @@
   }
 
   // 濃厚煮干しラーメン
-  .menu2 {
+  .menu-area--rich-niboshi {
     display: flex;
     flex-direction: column-reverse;
     margin-bottom: 10px;
+
+    img {
+      width: 75%;
+      margin-inline: auto;
+      filter: drop-shadow(0 0 10px #c2c2c2);
+    }
   }
 
-  .menu2__info {
+  .menu-info--rich-niboshi {
     margin: 0 10px;
     background-color: #f2f2df;
     box-shadow: 0 0 10px #c2c2c2;
@@ -497,7 +543,7 @@
       }
 
       h3 {
-        margin: 0 0 10px 60px;
+        text-align: center;
 
         span {
           opacity: .7;
@@ -505,21 +551,57 @@
       }
 
       p {
-        padding-bottom: 10px;
+        padding: 10px;
         font-weight: bold;
         letter-spacing: 2px;
       }
     }
   }
 
-  .nouko-niboshi-ramen-img {
-    width: 100%;
-    filter: drop-shadow(0 0 10px #c2c2c2);
+  //煮干しラーメン 灰
+  .menu-area--gray-niboshi {
+    margin-bottom: 30px;
+
+    img {
+      display: block;
+      width: 75%;
+      margin-inline: auto;
+      filter: drop-shadow(0 0 10px #c2c2c2);
+    }
+
+    .menu-info--gray-niboshi {
+      margin: 0 10px;
+      background-color: #f2f2df;
+      box-shadow: 0 0 10px #c2c2c2;
+
+      div {
+        width: 90%;
+        margin: 0 auto;
+
+        h2 {
+          text-align: center;
+          margin-bottom: 10px;
+        }
+
+        h3 {
+          text-align: center;
+
+          span {
+            opacity: .7;
+          }
+        }
+
+        p {
+          padding: 10px;
+          font-weight: bold;
+          letter-spacing: 2px;
+        }
+      }
+    }
   }
 
-
   //サイドメニュー
-  .menu-side {
+  .side-menu {
     width: 100%;
 
     h2 {
@@ -527,13 +609,14 @@
     }
   }
 
-  .rise {
+  // ご飯物
+  .side-menu__rise {
     display: flex;
     align-items: center;
     flex-direction: column;
   }
 
-  .dl-menu {
+  .side-menu__item {
     display: flex;
     justify-content: space-between;
     width: 75%;
@@ -548,7 +631,8 @@
     }
   }
 
-  .topping {
+  // トッピング
+  .side-menu__topping {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -561,6 +645,7 @@
 
   .shop-title {
     margin: 40px auto;
+
     &::before {
       content: "";
       display: inline-block;
@@ -581,7 +666,7 @@
       width: 50px;
       height: 2px;
       background-color: #c2c2c2;
-    }   
+    }
   }
 
   .shop-info {
@@ -607,7 +692,7 @@
       margin: 0;
       border-bottom: 1px solid #c2c2c2;
     }
-    
+
   }
 
 
@@ -616,8 +701,10 @@
   .map {
     position: relative;
   }
-  .map-title-area {
+
+  .map-title {
     margin: 40px auto;
+
     &::before {
       content: "";
       display: inline-block;
@@ -628,7 +715,7 @@
       height: 2px;
       background-color: #c2c2c2;
     }
-  
+
     &::after {
       content: "";
       position: absolute;
@@ -641,6 +728,7 @@
     }
   }
 
+  // Google map
   iframe {
     display: block;
     width: 90%;

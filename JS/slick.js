@@ -1,4 +1,4 @@
-$('.slide__wrap').slick({
+$('.main-slick__wrap').slick({
   zIndex:1,
   autoplay: true,
   dots: false,

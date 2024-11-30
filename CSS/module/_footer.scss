@@ -1,7 +1,9 @@
 @use '..//setting/config';
+@use '../mixin/mixin';
 
-@include config.mq(pc) {
+@include mixin.mq(pc) {
 
+  //フッターレイアウト
   .footer {
     display: flex;
     justify-content: space-around;
@@ -12,94 +14,101 @@
     background-color: rgb(22, 11, 11);
   }
 
-  .copyright {
+  //コピーライト
+  .footer__copyright {
     font-size: 1rem;
     color: white;
   }
 
-  .logo__area {
+  //SNS
+  .footer__sns-area {
     display: flex;
 
-    .logo-x {
+    .footer__logo--x {
       padding: 10px;
       width: 30px;
     }
 
-    .logo-instagram {
+    .footer__logo--instagram {
       padding: 10px;
       width: 30px;
     }
   }
 
-  .top-btn {
+  //ページトップボタン
+  .footer__top-btn {
     font-size: 1rem;
     position: relative; //子要素にabsoluteをかけるのに必要
     color: white;
-  }
 
-  //罫線疑似要素 ※初期は非表示
-  .top-btn::after {
-    content: ''; //コンテンツを配置
-    position: absolute; //罫線の絶対位置を設定
-    bottom: 0; //線の位置
-    left: 0; //線の位置
-    width: 100%; //罫線の幅
-    height: 2px; //罫線の高さ
-    border-radius: 4px; //罫線の丸み
-    background-color: white; //罫線の色
-    transform-origin: center; //疑似要素の座標
-    transform: scaleX(0); //罫線のX軸の長さ ※「0」は何も表示されない
-    transition: transform, 0.2s ease-in-out; //アニメーション設定
+    //アニメーション
+    &::after {
+      content: ''; //コンテンツを配置
+      position: absolute; //罫線の絶対位置を設定
+      bottom: 0; //線の位置
+      left: 0; //線の位置
+      width: 100%; //罫線の幅
+      height: 2px; //罫線の高さ
+      border-radius: 4px; //罫線の丸み
+      background-color: white; //罫線の色
+      transform-origin: center; //疑似要素の座標
+      transform: scaleX(0); //罫線のX軸の長さ ※「0」は何も表示されない
+      transition: transform, 0.2s ease-in-out; //アニメーション設定
+    }
+    
+    &:hover::after {
+      transform: scaleX(1); //罫線のX軸の長さを1 ※「1」は元の要素のサイズ
+    }
   }
-
-  //マウスオーバー時、疑似要素を表示
-  .top-btn:hover::after {
-    transform: scaleX(1); //罫線のX軸の長さを1 ※「1」は元の要素のサイズ
-  }
-
 }
 
 
 // スマートフォン用
-@include config.mq(sp) {
+@include mixin.mq(sp) {
+
+  //フッターレイアウト
   footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:rgb(22, 11, 11);
+    background-color: rgb(22, 11, 11);
     width: 100%;
   }
 
-  .top-btn {
+  //ページトップボタン
+  .footer__top-btn {
     order: -1;
     padding: 10px;
   }
+
   a:link {
     color: white;
   }
+
   a:visited {
-    color:white;
+    color: white;
   }
 
-  .copyright {
+  // コピーライト
+  .footer__copyright {
     order: 1;
     font-size: 1rem;
     color: white;
   }
 
-  .logo-area {
+  // SNS
+  .footer__sns-area {
     order: 0;
     text-align: center;
   }
 
-  .logo-x{
+  .footer__logo--x {
     width: 10%;
     padding: 10px;
   }
 
-  .logo-instagram{
+  .footer__logo--instagram {
     width: 10%;
     padding: 10px;
   }
-
 }

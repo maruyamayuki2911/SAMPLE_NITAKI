@@ -1,0 +1,28 @@
+// mapモジュールインポート
+@use 'sass:map';
+
+// 全体のフォント
+@mixin base-font {
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// セクションタイトルのフォーマット
+@mixin title-format($fontSize) {
+  text-shadow: 1px 1px 2px gray;
+  font-size: $fontSize;
+  letter-spacing: 8px;
+}
+
+// メディアクエリー
+$breakpoints: (
+  'pc': 'screen and (min-width: 891px)',
+  'sp': 'screen and (max-width: 890px)',
+  ) !default;
+
+@mixin mq($breakpoint) {
+  @media #{map.get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
